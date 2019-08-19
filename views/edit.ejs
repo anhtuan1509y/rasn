@@ -1,0 +1,59 @@
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+<body>
+    <div class="container edit">
+    <form action = "" method="POST">
+
+         <h1 class="text-center">Edit product</h1>
+        <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>price</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% info.rows.forEach(function(p) {%>
+      <tr>
+        <td>Name</td>
+        <td>
+        <textarea rows="2" cols="80" name = "ten"><%=p.ten%>
+          </textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td>
+        <textarea rows="2" cols="80" name = "price"><%=p.price%>
+          </textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td><textarea rows="2" cols="80" name = "img"><%=p.img%>
+          </textarea></td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td><textarea rows="2" cols="80" name = "ds"><%=p.description%>
+          </textarea>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+      <input type="submit" class="" value="Save" style="margin-left: 580px">
+    </form>
+    </div>
+</body>
+</html>
